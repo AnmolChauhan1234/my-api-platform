@@ -3,3 +3,25 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+
+upload_data:
+    path: /api/upload
+    controller: App\Controller\UserController::upload
+    methods: POST
+
+view_users:
+    path: /api/users
+    controller: App\Controller\UserController::getUsers
+    methods: GET
+
+backup_db:
+    path: /api/backup
+    controller: App\Controller\BackupController::backup
+    methods: GET
+
+restore_db:
+    path: /api/restore
+    controller: App\Controller\RestoreController::restore
+    methods: POST
+
