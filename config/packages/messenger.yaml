@@ -10,9 +10,9 @@ framework:
             # sync: 'sync://'
             # async: '%env(MESSENGER_TRANSPORT_DSN)%'
             async:
-                dsn: 'doctrine://default'  # 'default' refers to your Doctrine database connection
+                dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
                 options:
-                    table_name: 'messenger_messages'
+                    # Configure any specific options for Mailgun if necessary
 
         routing:
             # Route your messages to the transports
